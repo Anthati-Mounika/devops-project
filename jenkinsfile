@@ -17,6 +17,7 @@ pipeline {
                 sh 'docker push yourdockerhubusername/devops-app'
             }
         }
+        
         stage('Deploy to Kubernetes') {
             steps {
                 sh 'kubectl apply -f deployment.yaml'
